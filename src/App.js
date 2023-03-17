@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+
 import './App.css';
+import logo from './logo.svg';
+import PrivateImputPage from './page/login'
+import InfoPage from './page/info'
+import SendPage from './page/send'
+import { Route,Routes  } from 'react-router-dom'
+
+
+import { Buffer } from "buffer";
+window.Buffer = window.Buffer || Buffer;
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Routes>
+          <Route index element={<PrivateImputPage />} />
+          <Route path="info/:npub" element={<InfoPage />} />
+          <Route path="send" element={<SendPage />} />
+          <Route path="*" element={<PrivateImputPage />} /> 
+      </Routes>
+
     </div>
   );
 }

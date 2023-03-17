@@ -1,5 +1,9 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
 }
 
 .App-logo {
@@ -13,8 +17,24 @@
   }
 }
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+} */
+
+.App-link {
+  color: #61dafb;
+}
+
+.Main-Body {
+  width: 100%;
+  background-color: #484f5d;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,8 +44,31 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Main-Card {
+  width: 65%;
+  /* background-color: #484f5d;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white; */
+}
+
+
+.Button-center{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.npubEdit{
+  width: 900;
+
 }
 
 @keyframes App-logo-spin {
