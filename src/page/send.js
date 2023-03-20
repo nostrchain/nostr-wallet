@@ -26,6 +26,8 @@ const SendPage = () => {
 
 
     const refreshBalance = () => {
+        console.log("process.env=",process.env);
+
         console.log("refreshBalance ...")
         getBankBalance(npub).then(([allBalance,bankBalance,walletBalance,addr]) =>{
             console.log("getBankBalance ok",allBalance,bankBalance,walletBalance,addr);

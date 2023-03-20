@@ -23,6 +23,9 @@ const InfoPage = () => {
 
 
     const refreshBalance = () => {
+        console.log("process.env=",process.env);
+
+
         getBankBalance(npub).then(([allBalance,bankBalance,walletBalance,addr]) =>{
             console.log("getBankBalance ok",allBalance,bankBalance,walletBalance,addr);
             setBalance(allBalance)
